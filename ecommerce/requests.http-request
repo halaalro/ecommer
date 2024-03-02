@@ -1,0 +1,11 @@
+{
+  "body": {
+    "content": "",
+    "file": false,
+    "fileSize": false
+  },
+  "headers": {},
+  "method": "GET",
+  "title": "requests",
+  "url": "https://api-m.sandbox.paypal.com/v1/oauth2/token"
+}
