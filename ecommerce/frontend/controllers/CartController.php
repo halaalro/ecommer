@@ -341,9 +341,9 @@ class CartController extends \frontend\base\Controller
         if ($exists) {
             throw new BadRequestHttpException();
         }
-       // $clintid="AWqEbtaA8p6cxuPN5w3vmg_GK0Nk2Ox6efPUTSACMSb6Q5OKQJ9iuek1T-LtPJny0O_8bMsoMwv0MBep";
-       // $clintsecrit="EHGjvLKtCbwohA3YULYohE1VHC9gh-xizmY5h7xiWO2dGYx5fkwxVyXVUfAn8MJjp8N_sd0qJ7oJxnXJ";
-        $environment = new SandboxEnvironment(Yii::$app->params['paypalClientId'], Yii::$app->params['paypalSecret']);
+        $clintid="AWqEbtaA8p6cxuPN5w3vmg_GK0Nk2Ox6efPUTSACMSb6Q5OKQJ9iuek1T-LtPJny0O_8bMsoMwv0MBep";
+        $clintsecrit="EHGjvLKtCbwohA3YULYohE1VHC9gh-xizmY5h7xiWO2dGYx5fkwxVyXVUfAn8MJjp8N_sd0qJ7oJxnXJ";
+        $environment = new SandboxEnvironment( $clintid, $clintsecrit);
          $client = new PayPalHttpClient($environment);
         
         $response = $client->execute(new OrdersGetRequest($pappalOrderId));
